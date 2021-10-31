@@ -3,11 +3,11 @@
 PYTHON_COMMAND=python3
 
 MAIN_FILE=tmc.py
-STATE_FILE=state.yaml
+
+CONFIG_FILE=config.yaml
+SAVE_FILE=save.txt
 
 all: run
 
 run: clean $(STATE_FILE)
-	$(PYTHON_COMMAND) $(MAIN_FILE) $(STATE_FILE)
-
-clean:
+	$(PYTHON_COMMAND) $(MAIN_FILE) $(CONFIG_FILE) $(SAVE_FILE)

@@ -24,11 +24,11 @@ buildings = {
         'cps': 1400,
     },
     'temple': {
-        'base_cost': 2.0e7,
+        'base_cost': 20e6,
         'cps': 7800,
     },
     'wizard_tower': {
-        'base_cost': 3.3e8,
+        'base_cost': 330e6,
         'cps': 44000,
     },
     'shipment': {
@@ -36,39 +36,39 @@ buildings = {
         'cps': 260000,
     },
     'alchemy_lab': {
-        'base_cost': 7.5e10,
+        'base_cost': 75e9,
         'cps': 1.6e6,
     },
     'portal': {
         'base_cost': 1.0e12,
-        'cps': 1.0e7,
+        'cps': 10e6,
     },
     'time_machine': {
-        'base_cost': 1.4e13,
-        'cps': 6.5e7,
+        'base_cost': 14e12,
+        'cps': 65e6,
     },
     'antimatter_condenser': {
-        'base_cost': 1.7e14,
-        'cps': 4.3e8,
+        'base_cost': 170e12,
+        'cps': 430e6,
     },
     'prism': {
         'base_cost': 2.1e15,
         'cps': 2.9e9,
     },
     'chancemaker': {
-        'base_cost': 2.6e16,
-        'cps': 2.1e10,
+        'base_cost': 26e15,
+        'cps': 21e9,
     },
     'fractal_engine': {
-        'base_cost': 3.1e17,
-        'cps': 1.5e11,
+        'base_cost': 310e15,
+        'cps': 150e9,
     },
     'javascript_console': {
-        'base_cost': 7.1e19,
+        'base_cost': 71e18,
         'cps': 1.1e12,
     },
     'idleverse': {
-        'base_cost': 1.2e22,
+        'base_cost': 12e21,
         'cps': 8.3e12,
     },
 }

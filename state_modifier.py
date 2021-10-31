@@ -2,6 +2,8 @@ from enum import Enum, auto
 
 from state import State
 
+from constants.upgrades import upgrades as u_data
+
 
 class StateModifier():
     class Action(Enum):
@@ -21,15 +23,16 @@ class StateModifier():
             item_cost = self.base_state.get_building_cost(item)
 
         elif action is self.Action.PURCHASE_UPGRADE:
-            self.modified_state.data['upgrades'].append(item['name'])
-            self.modified_state.data['purchasable_upgrades'].remove(item)
-            item_name = item['name']
-            item_cost = float(item['cost'])
+            self.modified_state.data['upgrades'][item]['purchased'] = True
+            upgrade_data = u_data[item]
+            item_name = upgrade_data['name']
+            item_cost = upgrade_data['cost']
 
         self.modification = {
             'action': action,
             'item': item_name,
             'total_cost': item_cost,
-            'remaining_cost': max(0, item_cost - self.modified_state.data['cookie_count'])
+            'remaining_cost': max(0, item_cost - self.modified_state.data['misc']['cookies_current'])
         }
-        self.modified_state.data['cookie_count'] = max(0, self.modified_state.data['cookie_count'] - item_cost)
+        self.modified_state.data['misc']['cookies_current'] = max(
+            0, self.modified_state.data['misc']['cookies_current'] - item_cost)
